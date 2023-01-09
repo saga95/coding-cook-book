@@ -1,21 +1,21 @@
 const { sum, substract } = require("./calcs");
 
-function sumTest(a, b, expected) {
-  let result = sum(a, b);
+async function sumTest(a, b, expected) {
+  let result = await sum(a, b);
   expect(result).toBe(expected);
 }
 
-function substractionTest(a, b, expected) {
-  let result = substract(a, b);
+async function substractionTest(a, b, expected) {
+  let result = await substract(a, b);
   expect(result).toBe(expected);
 }
 
 test("Sum test", () => sumTest(5, 5, 10));
 test("Substration test", () => substractionTest(5, 5, 10));
 
-function test(title, callback) {
+async function test(title, callback) {
   try {
-    callback();
+    await callback();
     console.log(`🤜 : ${title} passed`);
   } catch (error) {
     console.log(`👎 : ${title} failed`);
