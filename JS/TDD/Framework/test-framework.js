@@ -13,22 +13,22 @@ async function substractionTest(a, b, expected) {
 test("Sum test", () => sumTest(5, 5, 10));
 test("Substration test", () => substractionTest(5, 5, 10));
 
-async function test(title, callback) {
-  try {
-    await callback();
-    console.log(`🤜 : ${title} passed`);
-  } catch (error) {
-    console.log(`👎 : ${title} failed`);
-    console.error(error);
-  }
-}
+// async function test(title, callback) {
+//   try {
+//     await callback();
+//     console.log(`🤜 : ${title} passed`);
+//   } catch (error) {
+//     console.log(`👎 : ${title} failed`);
+//     console.error(error);
+//   }
+// }
 
-function expect(actual) {
-  return {
-    toBe(expected) {
-      if (actual !== expected) {
-        throw new Error("actual not equals to the expected value");
-      }
-    },
-  };
-}
+// function expect(actual) {
+//   return {
+//     toBe(expected) {
+//       if (actual !== expected) {
+//         throw new Error("actual not equals to the expected value");
+//       }
+//     },
+//   };
+// }
